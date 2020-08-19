@@ -4,7 +4,7 @@
 * [Programming Abstractions](./programming_abstractions.pdf)
 
 ## Assignments
-* [Assign0: Welcome to CS106B!]()
+- [ ] [Assign0: Welcome to CS106B!]()
 
 ## Lecture 1: Welcome!
 - [ ] [Lecture Recording](https://stanford.zoom.us/rec/play/tcIoI-v-_Tk3SIaW5QSDUKV9W421f6is03QZqfUFmUywViMHMAHwbrEaZ-r6GuF8WpEJ0558CwXf4tfk)
