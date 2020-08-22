@@ -6,7 +6,8 @@
 ## Assignments
 - [ ] [Assign0: Welcome to CS106B!]()
 
-## Lecture 1: Welcome!
+## Lectures
+### Lecture 1: Welcome!
 - [X] [Lecture Recording](https://stanford.zoom.us/rec/play/tcIoI-v-_Tk3SIaW5QSDUKV9W421f6is03QZqfUFmUywViMHMAHwbrEaZ-r6GuF8WpEJ0558CwXf4tfk)
 * [Lecture Slides](./slides/lecture1_slides.pdf)
 * [Lecture code example](./code_examples/HelloWorld.zip)
