@@ -16,7 +16,7 @@ Open the project in Qt Creator and build and run the program. It will ask you to
 Open the [Assign 0 debugger tutorial](./DebuggerTutorial.pdf). This wonderful guide written by Keith Schwarz walks you through using the debugger on the Name Hash program. Follow along with the step-by-step instructions. At some point, you'll be asked to remember a number. Write this number down; you'll need it to complete the assignment!
 
 # Step 5) Read about the Honor Code
-You are required to read our handout CS106B and the Honor Code before submitting assignments. Do this now before proceeding to the final step.
+You are required to read our handout [CS106B and the Honor Code](http://web.stanford.edu/class/cs106b/handouts/honor_code) before submitting assignments. Do this now before proceeding to the final step.
 
 # Step 6) Submit
 Once you've finished everything, fill out the form at the following URL:
