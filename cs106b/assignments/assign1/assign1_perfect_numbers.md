@@ -38,7 +38,8 @@ def find_perfects(stop):
 ```
 
 The same code is now expressed below in C++. If your CS106A was taught in Python, comparing and contrasting these two may be a helpful way to start adapting to the language differences. If instead your prior course/experience was with Java/Javascript, just sit back and enjoy how C++ already seems familiar to what you know!
-``cpp
+
+```cpp
 /* This function takes in a number n and calculates the sum
  * of all proper divisors of n, excluding itself.
  *
