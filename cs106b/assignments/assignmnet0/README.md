@@ -1,7 +1,7 @@
 Welcome to CS106B! This assignment is designed to help you get your development environment set up and running so that you can compile, run, and debug programs. There isn't any actual programming involved, and we hope that this doesn't take you too much time to complete. Remember, you don't need to understand what the code you're being asked to run is actually doing just yet. Over the course of the quarter, each of the different parts of this program will be illuminated! This assignment must be completed **individually**.
 
 # Step 1) Install Qt Creator
-Your first task is to configure your computer for Qt Creator, the development environment that we'll be using in CS106B this quarter. Follow the instructions in the Qt Installation Guide for your operating system.
+Your first task is to configure your computer for Qt Creator, the development environment that we'll be using in CS106B this quarter. Follow the instructions in the [Qt Installation Guide](http://web.stanford.edu/class/cs106b/qt/) for your operating system.
 
 If you run into trouble installing Qt Creator, don't panic! Nick will be holding a Qt Creator help session virtually on Zoom from 7:00PM – 9:00PM PDT on Tuesday, June 23.
 
