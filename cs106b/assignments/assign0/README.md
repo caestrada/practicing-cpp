@@ -8,7 +8,7 @@ If you run into trouble installing Qt Creator, don't panic! Nick will be holding
 # Step 2) Download starter project
 We will configure a starter project with the files needed for each assignment and post it in the form of a ZIP archive. Download the archive and unzip.
 
-📦 Starter code
+[📦 Starter code](../../code_examples/starter.zip)
 # Step 3) Hash your name
 Open the project in Qt Creator and build and run the program. It will ask you to enter your (preferred) first and last names. When you do, it will give back a hash code, a special number associated with your name. You can think of your hash code as a “fingerprint” associated with your name that's unlikely to be the same as anyone else's fingerprint. Write this number down; you'll need it to complete the assignment!
 
