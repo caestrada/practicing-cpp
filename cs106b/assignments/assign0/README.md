@@ -18,7 +18,7 @@ Open the [Assign 0 debugger tutorial](./DebuggerTutorial.pdf). This wonderful gu
 # Step 5) Read about the Honor Code
 You are required to read our handout [CS106B and the Honor Code](http://web.stanford.edu/class/cs106b/handouts/honor_code) before submitting assignments. Do this now before proceeding to the final step.
 
-# Step 6) Submit
+# Step 6) Submit - NOT APPLICABLE
 Once you've finished everything, fill out the form at the following URL:
 
 📋 Submit Google form: https://forms.gle/YyYaGri2CwJJvCLX9
