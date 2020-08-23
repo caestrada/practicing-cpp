@@ -5,6 +5,7 @@
 
 ## Assignments
 - [X] [Assign0: Welcome to CS106B!](https://github.com/caestrada/practicing-cpp/tree/master/cs106b/assignments/assign0)
+- [ ] [Assign1: Getting Your C++ Legs]()
 
 ## Lectures
 ### Lecture 2: Programming Fundamentals in C++
