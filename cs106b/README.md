@@ -4,7 +4,7 @@
 * [Programming Abstractions](./programming_abstractions.pdf)
 
 ## Assignments
-- [ ] [Assign0: Welcome to CS106B!]()
+- [ ] [Assign0: Welcome to CS106B!](https://github.com/caestrada/practicing-cpp/tree/master/cs106b/assignments/assignmnet0)
 
 ## Lectures
 ### Lecture 2: Programming Fundamentals in C++
