@@ -13,7 +13,7 @@ We will configure a starter project with the files needed for each assignment an
 Open the project in Qt Creator and build and run the program. It will ask you to enter your (preferred) first and last names. When you do, it will give back a hash code, a special number associated with your name. You can think of your hash code as a “fingerprint” associated with your name that's unlikely to be the same as anyone else's fingerprint. **Write this number down;** you'll need it to complete the assignment!
 
 # Step 4) Use the debugger
-Open the Assign 0 debugger tutorial. This wonderful guide written by Keith Schwarz walks you through using the debugger on the Name Hash program. Follow along with the step-by-step instructions. At some point, you'll be asked to remember a number. Write this number down; you'll need it to complete the assignment!
+Open the [Assign 0 debugger tutorial](). This wonderful guide written by Keith Schwarz walks you through using the debugger on the Name Hash program. Follow along with the step-by-step instructions. At some point, you'll be asked to remember a number. Write this number down; you'll need it to complete the assignment!
 
 # Step 5) Read about the Honor Code
 You are required to read our handout CS106B and the Honor Code before submitting assignments. Do this now before proceeding to the final step.
