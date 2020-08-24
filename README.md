@@ -1,6 +1,9 @@
 # Practicing C++
 
 ## Table of Contents
-* Lectures
+### Lectures
   * [CS106B](./cs106b)
+  
+### Recursion
+
 
