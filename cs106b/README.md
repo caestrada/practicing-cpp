@@ -8,6 +8,11 @@
 - [ ] [Assign1: Getting Your C++ Legs](./assignments/assign1)
 
 ## Lectures
+### Lecture 3: Strings and Testing
+- [ ] [Lecture Recording](https://stanford.zoom.us/rec/play/dr9S8eq4ORPpjB13Kiflj-jDKH9_k1ufd8oHirw_8Cchoahor3MTBQ4TIRVUkukUm4U4llpaziobSZuZ.OtOkxFMjcXTOZJ9Q?continueMode=true&_x_zm_rtaid=zyCdsoybSRCb9vsGc53eWw.1599411558526.110e2490ee32e6d1ee7d04ff024ed403&_x_zm_rhtaid=720)
+* [Lecture Slides](./slides/Lecture3_slides.pdf)
+* [Lecture code example](./lecture3.zip)
+
 ### Lecture 2: Programming Fundamentals in C++
 - [X] [Lecture Recording](https://stanford.zoom.us/rec/play/uJV-demv_Do3T92T5QSDU_Z-W460K6ms1nUervINnhrgVHUHMAegZrARN7G_jRBLgsKemsQ3IbXbdbeD?continueMode=true&_x_zm_rtaid=iGNkyTRdQTmoaDHU4I2GdA.1598116988861.fcd8103333dcbae21e8e6568ddf707d1&_x_zm_rhtaid=252)
 * [Lecture Slides](./slides/Lecture2_slides.pdf)
