@@ -9,7 +9,7 @@
 
 ## Lectures
 ### Lecture 3: Strings and Testing
-- [ ] [Lecture Recording](https://stanford.zoom.us/rec/play/dr9S8eq4ORPpjB13Kiflj-jDKH9_k1ufd8oHirw_8Cchoahor3MTBQ4TIRVUkukUm4U4llpaziobSZuZ.OtOkxFMjcXTOZJ9Q?continueMode=true&_x_zm_rtaid=zyCdsoybSRCb9vsGc53eWw.1599411558526.110e2490ee32e6d1ee7d04ff024ed403&_x_zm_rhtaid=720)
+- [X] [Lecture Recording](https://stanford.zoom.us/rec/play/dr9S8eq4ORPpjB13Kiflj-jDKH9_k1ufd8oHirw_8Cchoahor3MTBQ4TIRVUkukUm4U4llpaziobSZuZ.OtOkxFMjcXTOZJ9Q?continueMode=true&_x_zm_rtaid=zyCdsoybSRCb9vsGc53eWw.1599411558526.110e2490ee32e6d1ee7d04ff024ed403&_x_zm_rhtaid=720)
 * [Lecture Slides](./slides/Lecture3_Slides.pdf)
 * [Lecture code example](./code_examples/lecture3.zip)
 
