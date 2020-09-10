@@ -81,3 +81,26 @@ void findPerfects(long stop) {
     cout << "Done searching up to " << stop << endl;
 }
 ```
+
+## Observing runtime
+The starter project contains the above C++ code already written for you. Your first task is going to be to run the code and make some observations about how long it takes the program to run. **Important note: If at any point your program takes more than 5 minutes to run to completion, you can just stop the program and report the runtime as "> 5 mins."**
+
+To start, let's just get familiarized with what the output of running this code looks like. Open the project in Qt Creator and double-click on the main.cpp file. Ignore the cryptic if statement at the beginning of the main function for now - what you should see is a single uncommented call to findPerfects, which is what will get executed when you run the main function. Go ahead and build and run the program as given. Observe the output of the program.
+
+`Q1: How many numbers does the program search through? How many perfect numbers does it find? What are these perfect numbers?`
+
+Now, let's take a deeper dive into one of the core components of CS106B, which is analyzing the behavior of algorithms. What we would like to do is repeatedly run the search for perfect numbers many times with many different search sizes (40000, 80000, 160000, etc.) and observe how long the program takes to run for each search size. While we could do this by manually changing the argument to the **findPerfects** call in **main.cpp** and then re-running the whole program, you could imagine this getting very tedious. Instead, what we want is the ability to run many different time trials at once and get the timing results of all of them back at the same time. In order to do this, we'll have to take a brief detour to talk about the SimpleTest library.
+
+## Using SimpleTest
+In CS106B, you will use a unit-test framework called **SimpleTest** to test your code. **Stop here and read our guide to testing to introduce yourself to using this framework. In particular, pay attention to the `TIME_OPERATION`, `EXPECT`, `EXPECT_EQUAL`, and `STUDENT_TEST` components**. SimpleTest is somewhat akin to the "doctest" features you may have used in Python for CS106A. If you're not familiar with doctests, don't sweat – the testing guide above has everything you need to know about how testing your code will work in CS106B.
+
+This is mentioned in the testing guide but is worth repeating here: all tests that we have provided in the starter code are labeled using the `PROVIDED_TEST` identifier. When you add tests of your own, make sure to label them using the `STUDENT_TEST` identifier, so that your grader can easily identify which tests you've addded.
+
+## Running time trials
+Now, open up the **perfect.cpp** file and scroll to the bottom. Review the existing test cases, with a special focus on the first one, which consists of a number of different calls to **TIME_OPERATION**. This is the secret sauce that will allow us to accomplish our goal from earlier: reproducible calls to the **findPerfects** function with a different count of numbers to search for each function call. Take the following steps to run the existing test cases to see **SimpleTest** in action.
+
+Edit the main function in main.cpp by changing the argument passed to runSimpleTests from NO_TESTS to SELECTED_TESTS. For the rest of this exercise, you will not need to modify any of the code in main.cpp.
+Re-build and run the program. When prompted to "Enter your selection," type only the number 3 and hit enter to run the perfect.cpp tests. Notice that a SimpleTest popup window opens in addition to the console window. The results of the tests will appear in both. The given code should pass all the tests, so this shows you what a successful sweep through all the tests looks like.
+In particular, pay attention to the output of the first test, both in the graphical popup window and in the console window. You should see the output of multiple runs of the findPerfects function, as well as the amount of time each function call took.
+Q2: Fill out the table of timing results in short_answer.txt. To do so, you will need to experiment with uncommenting out some of the lines in the provided test in perfect.cpp. Experiment with larger and larger search sizes until the total runtime exceeds 5 minutes. At that point, feel free to just skip any larger remaining sizes and indicate that the runtime was too long to measure.
+Use the data to get a rough idea of the relationship between the argument search size and the amount of time required. It may help to plot these values on a graph, if you have the capability to do so.
