@@ -1,4 +1,4 @@
-# CS106B
+# [CS106B](http://web.stanford.edu/class/cs106b/)
 
 ![Schedule](./images/schedule.png)
 
