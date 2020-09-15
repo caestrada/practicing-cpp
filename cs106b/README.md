@@ -10,11 +10,11 @@ MONDAY SEPTEMBER 14, 2020
 -----
 
 READINGS
-* Readings: [Syllabus](./syllabus.md)
+- [X] Readings: [Syllabus](./syllabus.md)
 
 LINKS
-* [Slides](./lectures/lecture1_slides.pdf)
-* [Lecture Q&A](./lectures/lecture-1-qa.md)
+- [ ] [Slides](./lectures/lecture1_slides.pdf)
+- [X] [Lecture Q&A](./lectures/lecture-1-qa.md)
 
 📦 CODE
 * [WelcomeCode.zip](./code/WelcomeCode.zip)
