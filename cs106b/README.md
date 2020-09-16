@@ -10,7 +10,7 @@ MONDAY SEPTEMBER 14, 2020
 -----
 
 READINGS
-- [ ] Text Ch. 1, 2.1-2.4
+- [X] Text Ch. 1, 2.1-2.4
 
 LINKS
 - [X] [Slides](./lectures/lecture2_slides.pdf)
