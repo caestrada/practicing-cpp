@@ -3,7 +3,7 @@
 ![Schedule](./images/schedule.png)
 
 ## Lecture 2. C++ Fundamentals
-MONDAY SEPTEMBER 14, 2020
+WEDNESDAY SEPTEMBER 16, 2020
 
 ### Introduction to CS106B
 
