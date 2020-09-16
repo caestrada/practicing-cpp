@@ -2,6 +2,24 @@
 
 ![Schedule](./images/schedule.png)
 
+## Lecture 2. C++ Fundamentals
+MONDAY SEPTEMBER 14, 2020
+
+### Introduction to CS106B
+
+-----
+
+READINGS
+- [ ] Text Ch. 1, 2.1-2.4
+
+LINKS
+- [X] [Slides](./lectures/lecture2_slides.pdf)
+- [X] [Lecture Q&A]()
+
+📦 CODE
+* [ReferenceExamples.zip](./code/ReferenceExamples.zip)
+* [intro-cpp-lecture.zip](./code/intro-cpp-lecture.zip)
+
 ## Lecture 1. Welcome!
 MONDAY SEPTEMBER 14, 2020
 
