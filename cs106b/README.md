@@ -5,7 +5,7 @@
 ## Lectures
 
 ### Assignment 0. Welcome to CS106B!
-* [Assignment 0](./assignments/assignment_0/)
+* [Assignment 0](./assignments/assignment_0/assignment_0.md)
 
 ### Lecture 2. C++ Fundamentals
 -----
