@@ -5,9 +5,8 @@
 ## Lectures
 
 ### Lecture 2. C++ Fundamentals
-WEDNESDAY SEPTEMBER 16, 2020
-
 -----
+WEDNESDAY SEPTEMBER 16, 2020
 
 READINGS
 - [X] Text Ch. 1, 2.1-2.4
@@ -21,9 +20,8 @@ LINKS
 
 
 ### Lecture 1. Welcome!
-MONDAY SEPTEMBER 14, 2020
-
 -----
+MONDAY SEPTEMBER 14, 2020
 
 READINGS
 - [X] Readings: [Syllabus](./lectures/lecture_1/syllabus.md)
@@ -37,6 +35,10 @@ LINKS
 
 
 ### Lecture 0. Creating a new Qt project
+-----
+**Note** In order to run you must install the Stanford Library files. Follow instructions [here](http://web.stanford.edu/class/cs106b/qt/install-cs106).
+
+* [CS106.zip](./lectures/lecture_0/CS106.zip) file
+
 Our 📦 [sample project](./lectures/lecture_0/SampleProject.zip) is a blank/empty project can be used as a template for creating a new project with the proper CS106 settings.
 
-Using
