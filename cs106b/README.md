@@ -34,3 +34,9 @@ LINKS
 
 📦 CODE
 * [WelcomeCode.zip](./lectures/lecture_1/WelcomeCode.zip)
+
+
+### Lecture 0. Creating a new Qt project
+Our 📦 [sample project](./lectures/lecture_0/SampleProject.zip) is a blank/empty project can be used as a template for creating a new project with the proper CS106 settings.
+
+Using
