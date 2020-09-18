@@ -4,6 +4,9 @@
 ### Lectures
   * [CS106B](./cs106b)
   
+### Programming Abstractions in C++
+ * Here are the problems to the book.
+  
 ### Cracking The Coding Interview 6th
 * [Cracking The Coding Interview 6th - C++ Solutions](https://github.com/caestrada/cpp-cracking-the-coding-interview-th)
   
