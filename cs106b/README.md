@@ -9,14 +9,14 @@
 WEDNESDAY SEPTEMBER 18, 2020
 
 READINGS
-- [X] Text Ch. 3, strlib.h
+- [ ] Text Ch. 3, strlib.h
 
 LINKS
-- [X] [Slides](./lectures/lecture_3/lecture3_slides.pdf)
-- [X] [Lecture Q&A]()
+- [ ] [Slides](./lectures/lecture_3/lecture3_slides.pdf)
+- [ ] [Lecture Q&A]()
 
 📦 CODE
-* [intro-cpp-lecture.zip](./lectures/lecture_3/strings.zip)
+* [strings.zip](./lectures/lecture_3/strings.zip)
 
 ### Assignment 0. Welcome to CS106B!
 - [X] [Assignment 0](./assignments/assignment_0/)
