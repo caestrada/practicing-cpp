@@ -12,13 +12,14 @@ READINGS
 - [ ] Text Ch. 3, strlib.h
 
 LINKS
-- [ ] [Slides](./lectures/lecture_3/lecture3_slides.pdf)
+- [X] [Slides](./lectures/lecture_3/lecture3_slides.pdf)
 - [ ] [Lecture Q&A]()
 
 📦 CODE
 * [strings.zip](./lectures/lecture_3/strings.zip)
 
 ### Assignment 0. Welcome to CS106B!
+-----
 - [X] [Assignment 0](./assignments/assignment_0/)
 
 ### Lecture 2. C++ Fundamentals
