@@ -16,7 +16,7 @@ LINKS
 - [ ] [Lecture Q&A]()
 
 📦 CODE
-* [ToonShape.zip](./lectures/lecture_4/ToonShape.zip)
+* [ToonShape.zip](./lectures/lecture_4/ToonShade.zip)
 * [VectorsGrids.zip](./lectures/lecture_4/VectorsGrids.zip)
 
 ### Lecture 3. Strings
