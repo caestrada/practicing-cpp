@@ -4,9 +4,24 @@
 
 ## Lectures
 
+### Lecture 4. Vectors and Grids
+-----
+MONDAY SEPTEMBER 21, 2020
+
+READINGS
+- [ ] Text Ch. 5.1, [Vector](https://web.stanford.edu/dept/cs_edu/cppdoc/Vector-class.html), [Grid](https://web.stanford.edu/dept/cs_edu/cppdoc/Grid-class.html)
+
+LINKS
+- [ ] [Slides](./lectures/lecture_4/lecture4_slides.pdf)
+- [ ] [Lecture Q&A]()
+
+📦 CODE
+* [ToonShape.zip](./ToonShape.zip)
+* [VectorsGrids.zip](./VectorsGrids.zip)
+
 ### Lecture 3. Strings
 -----
-WEDNESDAY SEPTEMBER 18, 2020
+FRIDAY SEPTEMBER 18, 2020
 
 READINGS
 - [ ] Text Ch. 3, strlib.h
