@@ -9,10 +9,10 @@
 MONDAY SEPTEMBER 21, 2020
 
 READINGS
-- [ ] Text Ch. 5.1, [Vector](https://web.stanford.edu/dept/cs_edu/cppdoc/Vector-class.html), [Grid](https://web.stanford.edu/dept/cs_edu/cppdoc/Grid-class.html)
+- [X] Text Ch. 5.1, [Vector](https://web.stanford.edu/dept/cs_edu/cppdoc/Vector-class.html), [Grid](https://web.stanford.edu/dept/cs_edu/cppdoc/Grid-class.html)
 
 LINKS
-- [ ] [Slides](./lectures/lecture_4/lecture4_slides.pdf)
+- [X] [Slides](./lectures/lecture_4/lecture4_slides.pdf)
 - [ ] [Lecture Q&A]()
 
 📦 CODE
