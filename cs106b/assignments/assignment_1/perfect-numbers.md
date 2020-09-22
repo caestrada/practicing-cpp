@@ -87,5 +87,15 @@ Open the project in Qt Creator, find the file **main.cpp** file under "Sources a
 
 `
 Q1. How many numbers does the program search through? How many perfect numbers does it find? What are these perfect numbers?
+
+A1: The program searches up to 40,000 numbers. It finds 4 pefect numbers. The perfect numbers founds are 6, 28, 496, and 8128.
 `
+
+Now, let's take a deeper dive into one of the core components of CS106B, which is analyzing the behavior of algorithms. What we would like to do is run the search several times with different search sizes (20000, 40000, 80000, etc.) and observe how long the program takes to run for each search size. While you could do this by manually editing the argument to the **findPerfects** call in **main.cpp** and re-running the program, repeating this process for many different sizes becomes tedious. It would be more convenient if we could run several time trials in sequence and get the timing results of all in one go. In order to do this, we'll have to take a brief detour to talk about the SimpleTest library.
+
+## Using SimpleTest
+In CS106B, you will use a unit-test framework called SimpleTest to test your code. **Stop here and read our [guide to testing]() to introduce yourself to using this framework. In particular, pay attention to the STUDENT_TEST, EXPECT, EXPECT_EQUAL, and TIME_OPERATION components**. SimpleTest is somewhat akin to the "doctest" features you may have used in Python for CS106A. If you're not familiar with doctests, don't sweat – the testing guide above has everything you need to know about how testing your code will work in CS106B.
+
+It is mentioned in the testing guide but is worth repeating here: all tests that we have provided in the starter code are labeled using the PROVIDED_TEST identifier. When you add tests of your own, make sure to label them using the STUDENT_TEST identifier, so that your grader can easily identify which tests you've added.
+
 
