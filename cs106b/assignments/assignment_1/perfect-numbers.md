@@ -94,8 +94,32 @@ A1: The program searches up to 40,000 numbers. It finds 4 pefect numbers. The pe
 Now, let's take a deeper dive into one of the core components of CS106B, which is analyzing the behavior of algorithms. What we would like to do is run the search several times with different search sizes (20000, 40000, 80000, etc.) and observe how long the program takes to run for each search size. While you could do this by manually editing the argument to the **findPerfects** call in **main.cpp** and re-running the program, repeating this process for many different sizes becomes tedious. It would be more convenient if we could run several time trials in sequence and get the timing results of all in one go. In order to do this, we'll have to take a brief detour to talk about the SimpleTest library.
 
 ## Using SimpleTest
-In CS106B, you will use a unit-test framework called SimpleTest to test your code. **Stop here and read our [guide to testing]() to introduce yourself to using this framework. In particular, pay attention to the STUDENT_TEST, EXPECT, EXPECT_EQUAL, and TIME_OPERATION components**. SimpleTest is somewhat akin to the "doctest" features you may have used in Python for CS106A. If you're not familiar with doctests, don't sweat – the testing guide above has everything you need to know about how testing your code will work in CS106B.
+In CS106B, you will use a unit-test framework called SimpleTest to test your code. **Stop here and read our [guide to testing](./testing_guide.md) to introduce yourself to using this framework. In particular, pay attention to the STUDENT_TEST, EXPECT, EXPECT_EQUAL, and TIME_OPERATION components**. SimpleTest is somewhat akin to the "doctest" features you may have used in Python for CS106A. If you're not familiar with doctests, don't sweat – the testing guide above has everything you need to know about how testing your code will work in CS106B.
 
-It is mentioned in the testing guide but is worth repeating here: all tests that we have provided in the starter code are labeled using the PROVIDED_TEST identifier. When you add tests of your own, make sure to label them using the STUDENT_TEST identifier, so that your grader can easily identify which tests you've added.
+It is mentioned in the testing guide but is worth repeating here: all tests that we have provided in the starter code are labeled using the **PROVIDED_TEST** identifier. When you add tests of your own, make sure to label them using the **STUDENT_TEST** identifier, so that your grader can easily identify which tests you've added.
 
+## Running time trials
+Open the **perfect.cpp** file and scroll to the bottom. Review the provided test cases, with a special focus on the first one, which makes several calls to **TIME_OPERATION**. This is the secret sauce that will allow us to accomplish our goal from earlier: timing the operation of **findPerfects** on different input sizes. Follow these steps to run the provided test cases:
+* Edit the **main** function in **main.cpp** to change the argument passed to **runSimpleTests** from **NO_TESTS** to **SELECTED_TESTS**. For the rest of this exercise, you will not need to modify any of the code in **main.cpp**.
+* Re-build and run the program. When prompted to "Enter your selection," type only the number 3 (this choices selects the tests for the **perfect.cpp** file) and hit enter to run the **perfect.cpp** tests. A SimpleTest popup window opens in addition to the console window. The results of the tests will appear in both. The given code should pass all the tests, so this demonstrates what a successful sweep through all the tests looks like.
+* In particular, pay attention to the output of the first test, both in the graphical popup window and in the console window. You should see the output of multiple runs of the **findPerfects** function, as well as the amount of time each function call took.
+
+`
+Q2. Record the timing results for findPerfects into a table.
+
+A2: 
+Search Size: 20000  Runtime: 1.483 secs
+Search Size: 40000  Runtime: 5.792 secs
+Search Size: 80000  Runtime: 22.905 secs
+Search Size: 160000 Runtime: 93.573 secs
+Search Size: 320000 Runtime: > 5 mins.
+Search Size: 640000 Runtime: > 5 mins.
+`
+
+[Graph](./time_graph.pdf)
+
+* To do so, you will need to experiment with uncommenting out some of the lines in the provided test in **perfect.cpp**. Experiment with larger and larger search sizes until the total runtime exceeds 5 minutes. At that point, feel free to just skip any larger remaining sizes and indicate that the runtime was too long to measure.
+Use the data to get a rough idea of the relationship between the argument search size and the amount of time required. It may help to [plot these values on a graph](https://www.desmos.com/calculator), if you have the capability to do so.
+
+What you should notice among the time values in your table is that doubling the size of the search doesn't just cause the time required to also double; it goes up by a factor of 4. Rather than a linear relationship, we've got a quadratic relationship between the search size and the program execution time! Let's investigate why this might be.
 

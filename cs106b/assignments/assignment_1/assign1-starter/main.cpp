@@ -7,7 +7,7 @@ using namespace std;
 
 
 int main() {
-    if (runSimpleTests(NO_TESTS)) {
+    if (runSimpleTests(SELECTED_TESTS)) {
         return 0;
     }
 

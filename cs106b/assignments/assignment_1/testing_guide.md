@@ -132,7 +132,115 @@ STUDENT_TEST("Time operation vector sort over a range of input sizes")
 }
 ```
 Here are the test results for running the test cases above:
-![testing_guide](./testing_guide.md)
+![testing_guide](./test_image.png)
+Using **TIME_OPERATION** over a range of sizes lets you see how the time required changes with respect to input size, i.e. predicts the algorithm's Big O. Handy!
 
+By default, a test case that uses **TIME_OPERATION** will be reported as **Correct** as long as the expression being evaluated does not result in an error or crash. If you want to verify the actual correctness of the result as well as time it, you can mix in regular use of **EXPECT_EQUAL** and **EXPECT** into the test case as shown below:
+```cpp
+STUDENT_TEST("Time operation vector sort on tiny input and verify is sorted")
+{
+    Vector<int> v = {3, 7, 2, 45, 2, 6, 3, 56, 12};
+    TIME_OPERATION(v.size(), v.sort());
+    EXPECT(checkIsSorted(v));
+}
+```
 
+#### runSimpleTests
+The **main** program of every project will be configured so that you have three choices every time you want to run your program: run all the tests, run a selected portion of the tests, or run no tests at all and proceed with normal execution of the program. The way that you can control this is demonstrated below:
+```cpp
+int main()
+{
+    if (runSimpleTests( <test choice argument> ))
+        return 0;
+    ... 
+}
+```
+The argument to **runSimpleTests** is either:
+
+* **NO_TESTS** (skip testing altogether, just run rest of normal **main** function)
+* **ALL_TESTS** (run all tests for all files)
+* **SELECTED_TESTS** (provide menu to select which file to run tests)
+
+#### Debugging a failing test
+The goal you are shooting for is for all of your tests to pass. However, if you get a failed test result, don't look at this as sad times, this test result is news you can use. The failing test case indicates that you have identified a specific operation that behaves counter to your expectations. This means you know where to focus your attention.
+
+Dig into that test case under the debugger to analyze how it has gone astray. Set a breakpoint inside the text code block, and choose to stop at the line that is at or before the failing **EXPECT/EXPECT_EQUAL** statement.
+![](./breakpoint_image.png)
+Now run the tests under the debugger. When the program stops at the breakpoint, single step through the code while watching in the variables pane to observe the changing state of your variables, using a technique just like you did in the [debugging tutorial](./DebuggerTutorial.pdf) in Assignment 0.
+
+After you understand the failure and apply a fix, run that test again. When you see the test now pass, you can [celebrate having squashed that bug](http://phdcomics.com/comics/archive.php?comicid=180)!
+
+## Test-driven development
+We highly recommend employing test-driven development when working on your assignments. To do so, follow these steps:
+
+* identify a small, concrete task (bug to fix, feature to add, desired change in behavior)
+* construct tests for the desired outcome, add them to the file in which you're currently working, and verify the current code fails these tests
+* implement the changes in your code to complete the task
+* re-run your newly added tests and verify they now succeed
+* test the rest of the system (by running all tests) to verify you didn't inadvertently break something else
+
+You change only a small amount of code at once and validate your results with carefully constructed tests before and after. This keeps your development process moving forward while ensuring you have a functional program at each step!
+
+## Test cases and grading
+The **SimpleTest** framework will be supplied with each assignment, and there will be some initial test cases provided in the starter project, but you will also be expected to add your own tests.
+
+You will submit your tests along with the code, and the grader's review will consider the quality of your tests. We will also provide comments on your tests to help you improve your testing approach. Please incorporate our feedback into future assignments; it will improve your grade and, more importantly, your effectiveness as a programmer. We guarantee future employers will appreciate your ability to write good tests and well-tested code!
+
+Here are some things we look for in good tests.
+* Are the tests comprehensive? Is all the functionality tested?
+* Where possible, are the tests self-contained and independent?
+* Did you anticipate potential problems, tricky cases, on boundary conditions?
+* Did you develop the tests in a good order? Did you test basic functionality before more advanced functionality? Did you take small, carefully chosen steps?
+
+## Common questions
+Should each **EXPECT/EXPECT_EQUAL** be in a **STUDENT_TEST** code block of its own or can I list several within one code block?
+
+For tests that are closely related, it may be convenient to group them together in the same code block under one test name. The tests will operate as one combined group and show up in the report as one aggregate success (if all pass) or one failure (if at least one fails).
+
+However, there are advantages to separating each individual test case into its own code block. You will be able to choose a clear, specific name for this block. The separation isolates each test so you can easily identify exactly which cases are passing and which are failing. For example if you have
+```cpp
+STUDENT_TEST("Many tests together"){
+    EXPECT(... Test A ...)
+    EXPECT(... Test B ...)
+    EXPECT(... Test C ...)
+}
+```
+then if Test B fails, Test C will never run and you won't be able to see the output – you won't know if Test C passed or failed. On the other hand, if you structure your tests like this
+```cpp
+STUDENT_TEST("Test A"){
+    EXPECT(... Test A ...)
+}
+
+STUDENT_TEST("Test B"){
+    EXPECT(... Test B ...)
+}
+
+STUDENT_TEST("Test C"){
+    EXPECT(... Test C ...)
+}
+```
+then all the tests will run individually, and even if Test B fails, you will still get independent information about Tests A and C. Having this sort of isolated behavior might make debugging any problems you encounter a little bit easier!
+
+### What happens if my test case is bogus or malformed?
+When testing your code, you should construct each test case so that a correct implementation will pass (receive a "CORRECT"). A test case that been written to "fail" given a correct implementation is considered "bogus". If a test case is bogus, it is usually asking the wrong question.
+
+Suppose you have written an **isEven** function to determine if a number is even and you wish to test its correctness. You have written the bogus test case below that is designed to fail if the **isEven** function returns false on a odd input.
+```cpp
+STUDENT_TEST("Test isEven() on odd numbers should fail") {
+    EXPECT(isEven(3));
+}
+```
+If you run the above test on a correct implementation of **isEven**, the test will fail and the result is reported as "INCORRECT". The only way to "pass" this test would be with a broken implementation of **isEven**. Confirming whether your function is actually correctness becomes very confusing if your test case is bogus.
+
+Instead, you want to ask the question, "Does **isEven** return true for an even number?" and "Does **isEven** return false for an odd number?" The tests below are correct ways to test for both true and false results.
+```cpp
+STUDENT_TEST("Test isEven() on even number should return true") {
+    EXPECT(isEven(8));
+}
+
+STUDENT_TEST("Test isEven() on odd number should return false") {
+    EXPECT(!isEven(13));
+}
+```
+Both of these tests will pass for a correct implementation of **isEven**. In short, make sure to design your tests to pass not fail to demonstrate that your code is working.
 

@@ -9,12 +9,12 @@ A1: The program searches up to 40,000 numbers. It finds 4 pefect numbers. The pe
 
 Q2. Record the timing results for `findPerfects` into a table.
 A2: 
-Search Size: 20000  Runtime: TODO
-Search Size: 40000  Runtime: TODO
-Search Size: 80000  Runtime: TODO
-Search Size: 160000 Runtime: TODO
-Search Size: 320000 Runtime: TODO
-Search Size: 640000 Runtime: TODO
+Search Size: 20000  Runtime: 1.483 secs
+Search Size: 40000  Runtime: 5.792 secs
+Search Size: 80000  Runtime: 22.905 secs
+Search Size: 160000 Runtime: 93.573 secs
+Search Size: 320000 Runtime: > 5 mins.
+Search Size: 640000 Runtime: > 5 mins.
 
 Q3. Does it take the same amount of effort to compute `isPerfect` on the number 10 as it does on the number 1000? Why or why not? Does it take the same amount of work for `findPerfects` to search the range of numbers from 1-1000 as it does to search the numbers from 1000-2000? Why or why not?
 A3: TODO
