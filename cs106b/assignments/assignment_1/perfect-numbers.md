@@ -85,11 +85,11 @@ The starter project contains the above C++ code already written for you. Your fi
 
 Open the project in Qt Creator, find the file **main.cpp** file under "Sources and double-click to view its contents. Ignore the cryptic **if** statement at the beginning of the main function for now - what you should see is a single uncommented call to **findPerfects**, which is what will get executed when you run the main function. Build and run the program unchanged. Observe the output of the program.
 
-`
+```
 Q1. How many numbers does the program search through? How many perfect numbers does it find? What are these perfect numbers?
 
 A1: The program searches up to 40,000 numbers. It finds 4 pefect numbers. The perfect numbers founds are 6, 28, 496, and 8128.
-`
+```
 
 Now, let's take a deeper dive into one of the core components of CS106B, which is analyzing the behavior of algorithms. What we would like to do is run the search several times with different search sizes (20000, 40000, 80000, etc.) and observe how long the program takes to run for each search size. While you could do this by manually editing the argument to the **findPerfects** call in **main.cpp** and re-running the program, repeating this process for many different sizes becomes tedious. It would be more convenient if we could run several time trials in sequence and get the timing results of all in one go. In order to do this, we'll have to take a brief detour to talk about the SimpleTest library.
 
@@ -104,7 +104,7 @@ Open the **perfect.cpp** file and scroll to the bottom. Review the provided test
 * Re-build and run the program. When prompted to "Enter your selection," type only the number 3 (this choices selects the tests for the **perfect.cpp** file) and hit enter to run the **perfect.cpp** tests. A SimpleTest popup window opens in addition to the console window. The results of the tests will appear in both. The given code should pass all the tests, so this demonstrates what a successful sweep through all the tests looks like.
 * In particular, pay attention to the output of the first test, both in the graphical popup window and in the console window. You should see the output of multiple runs of the **findPerfects** function, as well as the amount of time each function call took.
 
-`
+```
 Q2. Record the timing results for findPerfects into a table.
 
 A2: 
@@ -114,7 +114,7 @@ Search Size: 80000  Runtime: 22.905 secs
 Search Size: 160000 Runtime: 93.573 secs
 Search Size: 320000 Runtime: > 5 mins.
 Search Size: 640000 Runtime: > 5 mins.
-`
+```
 
 [Graph](./time_graph.pdf)
 
