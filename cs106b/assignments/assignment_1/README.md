@@ -8,7 +8,7 @@ The code you will write involves expressions, control structures, functions, and
 
 This assignment consists of two parts.
 
-* Perfect Numbers
+* [Perfect Numbers](./perfect-numbers.md)
 is a fun warmup exercise involving number theory, algorithms, and optimization. It gives you a guided transition into C++, as well as the testing and debugging tools that we will be using in CS106B this quarter. You can start on this task right away – and we recommend doing so! Completing this warmup in the first few days reserves the better part of the week for the bigger second part.
 
 * Soundex Search
