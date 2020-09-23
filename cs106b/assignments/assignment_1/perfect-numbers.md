@@ -122,4 +122,124 @@ Search Size: 640000 Runtime: > 5 mins.
 Use the data to get a rough idea of the relationship between the argument search size and the amount of time required. It may help to [plot these values on a graph](https://www.desmos.com/calculator), if you have the capability to do so.
 
 What you should notice among the time values in your table is that doubling the size of the search doesn't just cause the time required to also double; it goes up by a factor of 4. Rather than a linear relationship, we've got a quadratic relationship between the search size and the program execution time! Let's investigate why this might be.
+```
+Q3. Does it take the same amount of effort to compute isPerfect on the number 10 as it does on the number 1000? Why or why not? Does it take the same amount of work for findPerfects to search the range of numbers from 1-1000 as it does to search the numbers from 1000-2000? Why or why not?
+```
+
+One of the downsides of the exhaustive algorithm as written is that its performance starts to get really bad, really quickly! In particular, the first four perfect numbers are found pretty quickly (**6, 28, 496, 8128**), but that fifth one is quite a ways off – in the neighborhood of 33 million. Working up to that number by exhaustive search is going to take l-o-o-ng time.
+
+```
+Q4. Extrapolate from the data you gathered and make a prediction: how long will it take findPerfects to reach the fifth perfect number?
+```
+This is your first exposure to algorithmic analysis, a topic we will explore in much greater detail throughout the course, starting next week!
+
+As a fun aside, if you have access to a Python environment, you can attempt similarly-sized searches using the Python version of the program to see just how much slower an interpreted language (Python) is compared to a compiled language (C++). Check out the Python vs C++ Showdown we've posted to the Ed discussion forum.
+
+## Digging deeper into testing
+Having completed these observations about performance, we move on to testing the code, which is one of the most important skills that we hope you will come out of this class with. Designing good tests and writing solid, well-tested code are skills that will serve you well for the rest of your computer science journey!
+
+Complete the following exercises, which will help you start to develop your testing chops by exploring and writing tests on some of the functions that we've provided for you:
+
+* Since all perfect numbers must be positive, there should be no such thing as a negative perfect number; thus isPerfect should return false for any negative numbers. Will you need to make a special case for this or does the code already handle it? Let's investigate…
+    * Look at the code and make a prediction about what happens is isPerfect is given a negative input.
+    * Add a new STUDENT_TEST case that calls isPerfect on a few different negative inputs. The expected result of isPerfect for such inputs should be false.
+    * Run these test cases to confirm that the code behaves as expected. Now that you have added your own tests, selecting the perfect.cpp tests from the main menu is now numbered choice 4.
+* Introduce a bug into divisorSum (e.g. erroneously initialize total to 1 instead of 0). Rebuild and run the tests again. This should let you see how test failures are reported.
+```
+Q5. Do any of the tests still pass even with this broken function? Why or why not?
+
+```
+* Be sure to undo the bug and restore divisorSum to a correct state.
+* Add another STUDENT_TEST of your own but deliberately make the test case expect something erroneous (e.g. isPerfect(5) returns true). Run this test case. What happens?
+```
+Q6. Can the test framework detect that the test case is "bogus", in the sense that the premise of the test case itself is off-base?
+```
+* (Refer to our testing guide for a longer explanation of bogus tests) This example serves as a reminder to take care in constructing your test cases! The pass/fail result of a bogus test an be misleading or inverted. Be sure to remove that bogus test so it won't further confuse you. On this assignment, and all future ones, your goal is a clean green record for all tests.
+
+## Streamlining and more testing
+As you observed earlier, it is chore for an exhaustive search to reach the fifth perfect number. However, there is a neat little optimization you can apply that can significantly streamline the job. The function divisorSum runs a loop from 1 to N to find divisors, but in fact, this is quite wasteful. We truly only need to examine divisors up to the square root of N. Along the way, we can work out what the corresponding pairwise factor for a given divisor is without having to explicitly loop all the way up to the other factor. In other words, we can take advantage of the fact that each divisor that is less than the square root is paired up with a divisor that is greater than the square root. Take a moment to carefully think about why this is true and how you would rearrange the code to capitalize on this observation.
+
+Now, implement the following function prototype that has been provided in the starter code.
+
+long smarterSum(long n)
+
+You may find it helpful to use the provided divisorSum implementation as a starting point (that is, you may choose to copy-paste the existing code and make tweaks to it). Be careful: there are some subtle edge cases that you may have to handle in the adapted version that were not an issue in the original.
+
+The C++ library function sqrt can be used to compute a square root.
+
+After adding new code to your program, your next step is to thoroughly test that code and confirm it is bug-free. Only then should you move on to the next task. Let's write some tests for the smarterSum function.
+
+Because you already have the vetted function divisorSum at your disposal, a neat testing strategy here is to use EXPECT_EQUAL to confirm that the result from divisorSum(n) is equal to the result from smarterSum(n). Rather than pick a random value for n, brainstorm about why certain values might be good candidates. As an example, try picking a number like n=25 (which has an square root that is an integer value) to ensure there is no off-by-one issue on the stopping condition of your new loop. You must add at least 3 new student tests of your own (again, remember to label them as STUDENT_TEST) for smarterSum.
+
+```
+Q7. Describe the testing strategy your used for your test cases to confirm smarterSum is working correctly.
+```
+Once you have confirmed that smarterSum operates equivalently to divisorSum, implement the following two functions, which should take advantage of your new smarterSum function:
+
+bool isPerfectSmarter(long n)
+
+void findPerfectsSmarter(long stop)
+
+The code for these two functions is very similar to the provided isPerfect and findPerfects functions, just using your new, streamlined divisor summation algorithm. Again, you may copy-paste the existing implementations, and make small tweaks as necessary.
+
+Now let's run time trials to see just how much better our new algorithm is!
+
+Important note: As before, if at any point your program takes more than 5 minutes to run to completion, you can just stop the program and report the runtime as "> 5 mins."
+
+* Add a STUDENT_TEST that uses TIME_OPERATION to measure findPerfectsSmarter on a sequence of increasing sizes.
+```
+Q8. Record your timing results for findPerfectsSmarter into a table.
+```
+(You may have to use larger sizes than before to get results that are measurable, because this version is so much faster.)
+
+```
+Q9. Make a prediction: how long will findPerfectsSmarter take to reach the fifth perfect number?
+```
+Our previous algorithm grew at the rate N^2, while this new version is N√N, since we only have to inspect √N divisors for every number along the way. If you plot runtimes on the same graph as before, you will see that they grow much less steeply than the runtimes from our previous experiment.
+
+## Mersenne Primes and Euclid
+Back to story time for a little bit: last year, there was a rare finding of a new Mersenne prime. A prime number is one whose only divisors are 1 and the number itself. A Mersenne prime is a prime number that is one less than a power of two. In other words, it takes the form 2^n - 1 for some integer n. For example, the prime number 31 can be expressed as 2^5 - 1, and thus is a Mersenne prime.
+
+Mersenne primes are quite elusive, the one just found is only the 51st known and has almost 25 million digits! Verifying that the found number was indeed prime required almost two weeks of non-stop computing. The quest to find further Mersenne primes is driven by the Great Internet Mersenne Prime Search (GIMPS), a cooperative, distributed effort that taps into the spare cycles of a vast community of volunteer machines. Besides being hard to find, Mersenne primes are of great interest because they are some of the largest known prime numbers and because they show up in interesting ways in games like the Tower of Hanoi and the wheat and chessboard problem.
+
+Back in 400 BCE, Euclid discovered an intriguing relationship between perfect numbers and the Mersenne primes. Specifically, if 2^k - 1 is prime, then 2^(k-1)*(2^k - 1) is a perfect number. Those of you enrolled in CS103 will appreciate this lovely proof of the Euclid-Euler theorem. This relationship will allow us to calculate perfect numbers using a much more efficient approach. The final task of the warmup is to implement this blazingly-fast algorithm and bask in the glory of having beaten the pants off exhaustive search.
+
+## Turbo-charging with Euclid
+Now that your computer is good and tired, it's time to take a more elegant approach to this problem. Over two thousand years ago, that clever guy Euclid discovered an intriguing pattern in the perfect numbers and was able to prove that if 2^k - 1 is prime then 2^(k-1) multiplied by (2^k - 1) is a perfect number.
+
+Implement the function prototype:
+
+long findNthPerfectEuclid(long n)
+
+This function uses Euclid's method (described below) to find the nth perfect number:
+
+Start by setting k = 1.
+Calculate m = 2^k - 1 (use the C++ library function pow to compute exponential)
+Determine whether m is prime or composite. (a simple isPrime helper that uses an exhaustive loop is just fine)
+If m is prime, then calculate 2^(k-1) * (2^k - 1). This is the associated perfect number.
+Increment k and repeat until you have found the nth perfect number.
+The call findNthPerfectEuclid(n) should return the nth perfect number. What will be your testing strategy to verify that this function returns the correct result? You may find this table of perfect numbers to be helpful. One possibility is a test case that confirms each number is perfect according to your earlier function, e.g. EXPECT(isPerfect(findNthPerfectEuclid(n))).
+
+Note: Your function can assume that all inputs (values of n) will be positive (that is, greater than 0). In particular, this means that you don't have to worry about negative values of n or the case where n is zero.
+
+Add at least 4 new student test cases of your own to verify that your findNthPerfectEuclid is correct.
+
+```
+Q10. Explain how you chose your specific test cases and why they lead you to be confident findNthPerfectEuclid is working correctly.
+```
+A call to findNthPerfectEuclid(5) will near instantaneously find the fifth perfect number. Woah! Quite an improvement over the exhaustive algorithm, eh? This version is so lightning fast that it will quickly reach values that are too large to fit in a long. How many perfect numbers can you find before you overflow (an overflow is characterized by the large number you're incrementing suddenly becoming unexpectedly negative…)? This value may vary from system to system, so just keep an eye out for when things start to go south. As a point of comparison, back in 400 BC, Euler worked out the first eight perfect numbers himself — not too shabby for a guy with no electronics!
+
+Concluding Thoughts
+Hooray for algorithms! One of the themes for CS106B is to explore the tradeoffs between algorithm choices, especially as it relates to program efficiency. The differences between the exhaustive search and Euclid's approach is striking. Although there are tweaks (such as the square root trick) that will improve each algorithm relative to itself, the biggest bang for the buck comes from starting with a better overall approach. This result foreshadows many of the interesting things to come this quarter.
+
+As a finishing touch on this portion of the assignment, add to the comments in perfect.cpp to share with your section leader a little something about yourself and to offer an interesting tidbit you learned in doing this exercise (be it something about C++, algorithms, number theory, how spunky your computer is, or something else exciting!).
+
+Before moving on to the second part of the assignment, confirm that you have completed all tasks from the warmup. You should have answers to questions 1 to 10 in short_answer.txt. You should have implemented the following functions in perfect.cpp
+
+* smarterSum
+* isPerfectSmarter
+* findPerfectsSmarter
+* findNthPerfectEuclid
+
+as well as added the requisite number of tests for each of these functions.
 
