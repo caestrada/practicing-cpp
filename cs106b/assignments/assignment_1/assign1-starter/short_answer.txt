@@ -17,10 +17,11 @@ Search Size: 320000 Runtime: > 5 mins.
 Search Size: 640000 Runtime: > 5 mins.
 
 Q3. Does it take the same amount of effort to compute `isPerfect` on the number 10 as it does on the number 1000? Why or why not? Does it take the same amount of work for `findPerfects` to search the range of numbers from 1-1000 as it does to search the numbers from 1000-2000? Why or why not?
-A3: TODO
+A3: No, it does not take the same amount of effort to compute 'isPerfect' on the number 10 and 1000. As the number increases it takes more iterations to find numbers divisible by 0 in the 'divisorSum' function. 
+It should take approximatelly the same amount of time to compute 1-1000 as it does 1000-2000. The reason being that it totals 1000 numbers it needs to iterate through.
 
 Q4. Extrapolate from the data you gathered and make a prediction: how long will it take `findPerfects` to reach the fifth perfect number?
-A4: TODO
+A4: It could take ~6 minutes to find the results for the fifth.
 
 Q5. Do any of the tests still pass even with this broken function? Why or why not?
 A5: TODO

@@ -123,7 +123,7 @@ PROVIDED_TEST("Time multiple trials of findPerfects on doubling input sizes") {
 //    TIME_OPERATION(40000, findPerfects(40000));
 //    TIME_OPERATION(80000, findPerfects(80000));
 //    TIME_OPERATION(160000, findPerfects(160000));
-    TIME_OPERATION(320000, findPerfects(320000));
+//    TIME_OPERATION(320000, findPerfects(320000));
 //    TIME_OPERATION(640000, findPerfects(640000));
 }
 
