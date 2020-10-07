@@ -4,6 +4,20 @@
 
 ## Lectures
 
+### Lecture 6. Sets and Maps
+FRIDAY SEPTEMBER 25
+
+READINGS
+- [ ] Text 5.4, 5.5, 5.6, [Set](https://web.stanford.edu/class/cs106b/library/documentation/Set.html), [Map](https://web.stanford.edu/class/cs106b/library/documentation/Map.html)
+
+LINKS
+- [ ] [Slides](./lectures/lecture_6/slides.pdf)
+
+📦 CODE
+* [CountUniqueWords.zip](./lectures/lecture_6/CountUniqueWords.zip)
+* [SetsAndMaps.zip](./lectures/lecture_6/SetsAndMaps.zip)
+* [TallyWords.zip](./lectures/lecture_6/TallyWords.zip)
+
 ### Lecture 5. Stacks and Queues
 -----
 WEDNESDAY SEPTEMBER 21, 2020
