@@ -6,6 +6,8 @@
 
 ### Lecture 5. Stacks and Queues
 -----
+WEDNESDAY SEPTEMBER 21, 2020
+
 
 READINGS
 - [ ] Text 5.2, 5.3, [Stack](https://web.stanford.edu/class/cs106b/library/documentation/Stack.html), [Queue](https://web.stanford.edu/class/cs106b/library/documentation/Queue.html)
@@ -15,7 +17,7 @@ LINKS
 
 📦 CODE
 
-* stacks-and-queues.zip
+* [stacks-and-queues.zip](./lectures/lecture_5/stacks-and-queues.zip)
 
 
 ### Lecture 4. Vectors and Grids
