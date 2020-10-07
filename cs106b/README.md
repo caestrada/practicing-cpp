@@ -4,6 +4,61 @@
 
 ## Lectures
 
+### Lecture 11. Backtracking 1
+WEDNESDAY OCTOBER 7
+
+READINGS
+- [ ] Text 9.1
+
+LINKS
+- [ ] [Slides](./lectures/lecture_11/slides.pdf)
+
+📦 CODE
+[Backtracking1.zip](./lectures/lecture_11/Backtracking1.zip)
+
+
+### Lecture 10. Procedural Recursion
+MONDAY OCTOBER 5
+
+READINGS
+Text 8.1, 8.2, 8.3
+
+LINKS
+- [ ] [Slides](./lectures/lecture_10/slides.pdf)
+
+📦 CODE
+[ProceduralRecursion.zip](./lectures/lecture_10/ProceduralRecursion.zip)
+[Reducible.zip](./lectures/lecture_10/Reducible.zip)
+
+### Lecture 9. Fractals
+FRIDAY OCTOBER 2
+
+READINGS
+- [ ] Text 8.4
+
+LINKSl
+- [ ] [Slides](./lectures/lecture_9/slides.pdf)
+
+📦 CODE
+[Cantor.zip](./lectures/lecture_9/Cantor.zip)
+[Snowflake.zip](./lectures/lecture_9/Snowflake.zip)
+[SolveArithmetic.zip](./lectures/lecture_9/SolveArithmetic.zip)
+
+
+### Lecture 8. Introduction to Recursion
+-----
+WEDNESDAY SEPTEMBER 30
+
+READINGS
+- [ ] Text Ch. 7
+
+LINKS
+- [ ] [Slides](./lectures/lecture_8/slides.pdf)
+
+📦 CODE
+[Intro-to-Recursion.zip](./lectures/lecture_8/Intro-to-Recursion.zip)
+[Towers-Of-Hanoi.zip](./lectures/lecture_8/Towers-Of-Hanoi.zip)
+
 ### Lecture 7. Big O and Asymptotic Analysis
 -----
 MONDAY SEPTEMBER 28
