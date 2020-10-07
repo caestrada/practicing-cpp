@@ -4,7 +4,22 @@
 
 ## Lectures
 
+### Lecture 7. Big O and Asymptotic Analysis
+-----
+MONDAY SEPTEMBER 28
+
+READINGS
+- [ ] Text 10.1, 10.2
+
+LINKS
+- [ ] [Slides](./lectures/lecture_7/slides.pdf)
+
+📦 CODE
+* [BigO.zip](./lectures/lecture_7/BigO.zip)
+
+
 ### Lecture 6. Sets and Maps
+-----
 FRIDAY SEPTEMBER 25
 
 READINGS
